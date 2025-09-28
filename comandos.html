@@ -15,9 +15,24 @@
             color: #f1f1f1;
             display: flex;
         }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://media.discordapp.net/attachments/1274007756008849472/1274008648997404785/loading.png?ex=68d94303&is=68d7f183&hm=c1a102bf132ffd72adce6d5eeff6894ee4f171b9b2e8310781fb2a10d260a6b53&');
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
         .sidebar {
             width: 250px;
-            background-color: #000;
+            background-color: rgba(0, 0, 0, 0.8);
             padding: 20px;
             box-shadow: 2px 0 5px rgba(0,0,0,0.5);
             position: fixed;
@@ -41,6 +56,7 @@
             height: auto;
             padding: 10px;
             box-sizing: border-box;
+            background-color: transparent;
         }
         .sidebar-link {
             display: block;
@@ -53,7 +69,7 @@
         }
         .sidebar-link:hover, .sidebar-link.active {
             background-color: #282828;
-            color: #007bff;
+            color: #00ffff;
         }
         .footer {
             margin-top: 20px;
@@ -65,6 +81,7 @@
             margin-left: 250px;
             padding: 40px;
             flex-grow: 1;
+            background-color: rgba(0,0,0,0.4);
         }
         h1 {
             color: #fff;
@@ -73,7 +90,7 @@
             margin-bottom: 20px;
         }
         .accordion-item {
-            background-color: #1f1f1f;
+            background-color: rgba(0,0,0,0.6);
             border: 1px solid #282828;
             border-radius: 8px;
             margin-bottom: 10px;
@@ -86,7 +103,7 @@
             padding: 15px;
             cursor: pointer;
             font-weight: bold;
-            color: #fff;
+            color: #00ffff;
             background-color: #282828;
             border-bottom: 1px solid #282828;
         }
@@ -98,6 +115,7 @@
             font-size: 1.1em;
             border: none;
             padding: 0;
+            color: #00ffff;
         }
         .accordion-icon {
             font-size: 1.5em;
@@ -114,6 +132,7 @@
             padding: 5px 10px;
             border-radius: 4px;
             margin-right: 10px;
+            color: #fff;
         }
         .command-description {
             margin-top: 5px;
@@ -129,7 +148,7 @@
         .command-group h3 {
             margin-top: 0;
             margin-bottom: 10px;
-            color: #007bff;
+            color: #00ffff;
         }
         .command-group p {
             margin: 0;
@@ -146,6 +165,7 @@
             padding: 5px 10px;
             border-radius: 4px;
             font-family: 'Courier New', Courier, monospace;
+            color: #fff;
         }
     </style>
 </head>
@@ -154,7 +174,7 @@
 <div class="sidebar">
     <div class="sidebar-content">
         <div class="sidebar-logo">
-            <img src="https://live.staticflickr.com/65535/54815496737_ab30f94768_b.jpg" alt="Logo Metroville">
+            <img src="https://media.discordapp.net/attachments/1274007756008849472/1274007756231409718/aaaaaaaa.png?ex=68d9422f&is=68d7f0af&hm=115d6860e775f8f98bc99ff4dd072e57d41a0f8323b766bfadd19b64e5263702&=" alt="Logo Metroville">
         </div>
         <a href="index.html" class="sidebar-link">Macros</a>
         <a href="comandos.html" class="sidebar-link active">Comandos</a>
@@ -166,6 +186,7 @@
 
 <div class="main-content">
     <h1>Comandos Essenciais</h1>
+    <p>Clique em cada comando para ver sua descrição e uso.</p>
 
     <div class="accordion-item">
         <div class="accordion-header">
@@ -290,340 +311,137 @@
             
             <h3>Modelos de Carros</h3>
             <div class="sub-list">
-                <h4>Carros de Conce</h4>
+                <h4>Motos</h4>
                 <ul>
-                    <li>20xmax</li>
-                    <li>1200m</li>
                     <li>Akuma</li>
-                    <li>20xmax</li>
+                    <li>Bati</li>
+                    <li>Bf400</li>
+                    <li>Faggio3</li>
+                    <li>Hakuchou</li>
+                    <li>Manchez</li>
+                    <li>Manchez2</li>
+                    <li>Mayabusa</li>
+                    <li>nightblade</li>
+                    <li>Powersurge</li>
+                    <li>Sanchez</li>
+                    <li>Sanchez2</li>
+                    <li>Vortex</li>
+                    <li>Zombiea</li>
+                    <li>Zombieb</li>
+                </ul>
+            </div>
+            
+            <div class="sub-list">
+                <h4>Esportivos e Super-Esportivos</h4>
+                <ul>
+                    <li>1200m</li>
+                    <li>2b</li>
+                    <li>500x</li>
+                    <li>675lt</li>
+                    <li>9type</li>
+                    <li>Afritwin</li>
+                    <li>Akuma</li>
                     <li>Arsq8m</li>
                     <li>21serra</li>
-                    <li>Asterope</li>
-                    <li>2b</li>
                     <li>Astron</li>
-                    <li>500x</li>
-                    <li>Avarus</li>
-                    <li>675lt</li>
-                    <li>Baller2</li>
-                    <li>9type</li>
-                    <li>Bati</li>
-                    <li>Afritwin</li>
-                    <li>Bf400</li>
-                    <li>Akuma</li>
-                    <li>Bison</li>
-                    <li>Arsq8m</li>
-                    <li>Blista</li>
-                    <li>Asterope</li>
-                    <li>Blista2</li>
-                    <li>Astron</li>
-                    <li>Boor</li>
-                    <li>Aua3</li>
-                    <li>Brioso</li>
                     <li>Auditt</li>
-                    <li>Brioso3</li>
                     <li>Aurs63</li>
-                    <li>Buccaneer2</li>
                     <li>Aus3s20</li>
-                    <li>Buffalo2</li>
                     <li>Aus7</li>
-                    <li>Caracara2</li>
                     <li>Aus8</li>
-                    <li>Carbonizzare</li>
-                    <li>Avarus</li>
-                    <li>Cavalcade</li>
-                    <li>Baller2</li>
-                    <li>Chimera</li>
-                    <li>Bati</li>
-                    <li>chino</li>
-                    <li>Beastline6x6</li>
-                    <li>Chino2</li>
-                    <li>Bf400</li>
-                    <li>Cliffhanger</li>
-                    <li>Bison</li>
-                    <li>Club</li>
-                    <li>Blista</li>
-                    <li>Cog552</li>
-                    <li>Blista2</li>
-                    <li>Compass</li>
-                    <li>Boor</li>
-                    <li>Coquette</li>
-                    <li>Brioso</li>
-                    <li>Coquette4</li>
-                    <li>Brioso3</li>
-                    <li>Cyclone</li>
-                    <li>Brz</li>
-                    <li>Cypher</li>
-                    <li>Buccaneer2</li>
-                    <li>Daemon2</li>
-                    <li>Buffalo2</li>
-                    <li>Deity</li>
-                    <li>Caracara2</li>
-                    <li>Diablous2</li>
                     <li>carb2</li>
-                    <li>Dilettante</li>
                     <li>Carbonizzare</li>
-                    <li>Dominator</li>
-                    <li>Cavalcade</li>
-                    <li>Dominator3</li>
                     <li>Chimera</li>
-                    <li>Draugur</li>
-                    <li>chino</li>
-                    <li>Elegy</li>
-                    <li>Chino2</li>
-                    <li>Elegy4</li>
-                    <li>Cliffhanger</li>
-                    <li>Emperor</li>
-                    <li>Club</li>
-                    <li>Entityxf</li>
-                    <li>Cog552</li>
-                    <li>Faggio3</li>
-                    <li>Comet2</li>
-                    <li>Fcr2</li>
-                    <li>Compass</li>
-                    <li>Feltzer2</li>
                     <li>Coquette</li>
-                    <li>Fipu</li>
                     <li>Coquette4</li>
-                    <li>Flashgt</li>
                     <li>Cyclone</li>
-                    <li>Fq2</li>
                     <li>Cypher</li>
-                    <li>Furia</li>
-                    <li>Daemon2</li>
-                    <li>Furoregt</li>
                     <li>Deity</li>
-                    <li>Futo</li>
-                    <li>Delsoleg</li>
-                    <li>Gauntlet</li>
                     <li>Diablous2</li>
-                    <li>Gcmlamboultim</li>
-                    <li>Dilettante</li>
-                    <li>Granger</li>
-                    <li>Dogecargasrt</li>
-                    <li>Granger2</li>
-                    <li>Dogechalle</li>
-                    <li>Hakuchou</li>
                     <li>Dominator</li>
-                    <li>Hcfk2</li>
                     <li>Dominator3</li>
-                    <li>Hermes</li>
-                    <li>Draugur</li>
-                    <li>Huntley</li>
                     <li>Elegy</li>
-                    <li>Infernus</li>
-                    <li>Elegy2</li>
-                    <li>Ingot</li>
                     <li>Elegy4</li>
-                    <li>Issi3</li>
-                    <li>Emperor</li>
-                    <li>Issi8</li>
                     <li>Entityxf</li>
-                    <li>Italirsx</li>
-                    <li>Faggio3</li>
-                    <li>Jackal</li>
                     <li>Fancerx</li>
-                    <li>Jester</li>
                     <li>Fcr2</li>
-                    <li>Kanjo</li>
-                    <li>Fd2</li>
-                    <li>Kanjosj</li>
                     <li>Feltzer2</li>
-                    <li>Khamelion</li>
-                    <li>Feltzer2</li>
-                    <li>Land97</li>
-                    <li>Ferr488</li>
-                    <li>Landstalker</li>
-                    <li>Filthyns</li>
-                    <li>Manchez</li>
                     <li>Fipu</li>
-                    <li>Manchez2</li>
-                    <li>Flases</li>
-                    <li>Mesa</li>
                     <li>Flashgt</li>
-                    <li>Mk3vr6</li>
                     <li>Fq2</li>
-                    <li>Mombi60</li>
                     <li>Furia</li>
-                    <li>nightblade</li>
                     <li>Furoregt</li>
-                    <li>Ninef</li>
                     <li>Futo</li>
-                    <li>Novak</li>
                     <li>Gauntlet</li>
-                    <li>Omnisegt</li>
                     <li>Gcmlamboultim</li>
-                    <li>Osiris</li>
                     <li>Granger</li>
-                    <li>Outlaw</li>
                     <li>Granger2</li>
-                    <li>Panthere</li>
                     <li>Gt3e</li>
-                    <li>Panto</li>
-                    <li>Hakuchou</li>
-                    <li>Pariah</li>
                     <li>Hcfk2</li>
-                    <li>Patriot</li>
-                    <li>Hermes</li>
-                    <li>Patriot3</li>
                     <li>Honody</li>
-                    <li>Penumbra</li>
-                    <li>Huntley</li>
-                    <li>Pfister811</li>
                     <li>Infernus</li>
-                    <li>Postlude</li>
-                    <li>Ingot</li>
-                    <li>Powersurge</li>
-                    <li>Issi3</li>
-                    <li>Premier</li>
-                    <li>Issi8</li>
-                    <li>Primo2</li>
                     <li>Italirsx</li>
-                    <li>Raiden</li>
-                    <li>Jackal</li>
-                    <li>Randerols</li>
-                    <li>Jeep392</li>
-                    <li>Ratel</li>
                     <li>Jester</li>
-                    <li>Rhapsody</li>
                     <li>Kanjo</li>
-                    <li>Rhinehart</li>
                     <li>Kanjosj</li>
-                    <li>Rocoto</li>
                     <li>Khamelion</li>
-                    <li>Rrocket</li>
                     <li>Lambo610</li>
-                    <li>Rt3000</li>
                     <li>Lambohura</li>
-                    <li>Sabregt2</li>
                     <li>lamboursus</li>
-                    <li>Sanchez</li>
-                    <li>Land</li>
-                    <li>Sanchez2</li>
-                    <li>Land97</li>
-                    <li>Sanctus</li>
-                    <li>Landstalker</li>
-                    <li>Sandking</li>
                     <li>Lp700r</li>
-                    <li>Schwarzer</li>
-                    <li>Lunar</li>
-                    <li>Sentinel</li>
                     <li>Mahar1</li>
-                    <li>sentinel2</li>
                     <li>Mancer9</li>
-                    <li>Sentinel4</li>
-                    <li>Manchez</li>
-                    <li>Shinobi</li>
-                    <li>Manchez2</li>
-                    <li>Sl63</li>
-                    <li>Mayabusa</li>
-                    <li>Slamvan2</li>
                     <li>Mbc63</li>
-                    <li>Specter2</li>
                     <li>Mc70s</li>
-                    <li>Stingertt</li>
                     <li>Mclarensenna</li>
-                    <li>Subarx04</li>
                     <li>Meca400</li>
-                    <li>Sultan</li>
                     <li>meca53</li>
-                    <li>Superd</li>
                     <li>Meca63</li>
-                    <li>Surano</li>
                     <li>Mecagtt63</li>
-                    <li>Surge</li>
                     <li>Mentayblast</li>
-                    <li>Tailgater</li>
-                    <li>Mesa</li>
-                    <li>Tenbox</li>
-                    <li>Meslapior</li>
-                    <li>Torero2</li>
                     <li>Mismo34</li>
-                    <li>Tornado</li>
                     <li>Missan32</li>
-                    <li>Ts20</li>
                     <li>Missan37z</li>
-                    <li>Turismor</li>
                     <li>Missangtr</li>
-                    <li>Vacca</li>
                     <li>Mk3vr6</li>
-                    <li>Vela</li>
-                    <li>Mombi60</li>
-                    <li>Virtue</li>
                     <li>Mondaf8</li>
-                    <li>Voltic</li>
                     <li>Mondar650</li>
-                    <li>Vortex</li>
-                    <li>nightblade</li>
-                    <li>Waltosi</li>
                     <li>Ninef</li>
-                    <li>Washington</li>
-                    <li>Novak</li>
-                    <li>Weevil2</li>
                     <li>Omnisegt</li>
-                    <li>Wgougt2</li>
                     <li>Osiris</li>
-                    <li>Wjera</li>
                     <li>Outlaw</li>
-                    <li>Wmw07</li>
                     <li>Panthere</li>
-                    <li>Wmw34</li>
-                    <li>Panto</li>
-                    <li>wmwi8</li>
                     <li>Pariah</li>
-                    <li>Wmwm3</li>
                     <li>Patriot</li>
-                    <li>Wmwm380</li>
                     <li>Patriot3</li>
-                    <li>Wmwm5</li>
                     <li>Peejcheraki</li>
-                    <li>wmwm5tour</li>
                     <li>Penumbra</li>
-                    <li>wmwm8</li>
                     <li>Pfister811</li>
-                    <li>Wmwx16</li>
                     <li>Porx18</li>
-                    <li>Wolfsbane</li>
                     <li>Porxmalan</li>
-                    <li>Wrb36</li>
                     <li>Postlude</li>
-                    <li>Wrcomet6</li>
                     <li>Powersurge</li>
-                    <li>Wrok</li>
                     <li>Premier</li>
-                    <li>Wrvittura</li>
                     <li>Primo2</li>
-                    <li>Wwolf</li>
                     <li>R300</li>
-                    <li>Xa21</li>
                     <li>Raiden</li>
-                    <li>Xls2</li>
                     <li>Randerols</li>
-                    <li>Yosemite2</li>
                     <li>Ratel</li>
-                    <li>Zeiran</li>
                     <li>Rexufa</li>
-                    <li>Zentorno</li>
                     <li>Rhapsody</li>
-                    <li>Zombiea</li>
                     <li>Rhinehart</li>
-                    <li>Zombieb</li>
                     <li>Rocoto</li>
-                    <li>Zr350</li>
                     <li>Rrocket</li>
                     <li>Rt3000</li>
                     <li>Rx7</li>
                     <li>Sabregt2</li>
-                    <li>Sanchez</li>
-                    <li>Sanchez2</li>
                     <li>Sanctus</li>
-                    <li>Sandking</li>
                     <li>Schwarzer</li>
                     <li>Sentinel</li>
                     <li>sentinel2</li>
                     <li>Sentinel4</li>
                     <li>Shinobi</li>
                     <li>Sl63</li>
-                    <li>Slamvan2</li>
                     <li>Specter2</li>
                     <li>Stingertt</li>
                     <li>Subarx04</li>
@@ -671,386 +489,55 @@
                     <li>Zombieb</li>
                     <li>Zr350</li>
                 </ul>
-                <h4>Carros VIP</h4>
+            </div>
+
+            <div class="sub-list">
+                <h4>Utilitários e SUVs</h4>
                 <ul>
-                    <li>20xmax</li>
-                    <li>1200m</li>
-                    <li>Akuma</li>
-                    <li>20xmax</li>
-                    <li>Arsq8m</li>
-                    <li>21serra</li>
-                    <li>Asterope</li>
-                    <li>2b</li>
-                    <li>Astron</li>
-                    <li>500x</li>
-                    <li>Avarus</li>
-                    <li>675lt</li>
                     <li>Baller2</li>
-                    <li>9type</li>
-                    <li>Bati</li>
-                    <li>Afritwin</li>
-                    <li>Bf400</li>
-                    <li>Akuma</li>
                     <li>Bison</li>
-                    <li>Arsq8m</li>
-                    <li>Blista</li>
-                    <li>Asterope</li>
-                    <li>Blista2</li>
-                    <li>Astron</li>
                     <li>Boor</li>
-                    <li>Aua3</li>
-                    <li>Brioso</li>
-                    <li>Auditt</li>
-                    <li>Brioso3</li>
-                    <li>Aurs63</li>
-                    <li>Buccaneer2</li>
-                    <li>Aus3s20</li>
-                    <li>Buffalo2</li>
-                    <li>Aus7</li>
                     <li>Caracara2</li>
-                    <li>Aus8</li>
-                    <li>Carbonizzare</li>
-                    <li>Avarus</li>
                     <li>Cavalcade</li>
-                    <li>Baller2</li>
-                    <li>Chimera</li>
-                    <li>Bati</li>
-                    <li>chino</li>
-                    <li>Beastline6x6</li>
-                    <li>Chino2</li>
-                    <li>Bf400</li>
                     <li>Cliffhanger</li>
-                    <li>Bison</li>
-                    <li>Club</li>
-                    <li>Blista</li>
-                    <li>Cog552</li>
-                    <li>Blista2</li>
                     <li>Compass</li>
-                    <li>Boor</li>
-                    <li>Coquette</li>
-                    <li>Brioso</li>
-                    <li>Coquette4</li>
-                    <li>Brioso3</li>
-                    <li>Cyclone</li>
-                    <li>Brz</li>
-                    <li>Cypher</li>
-                    <li>Buccaneer2</li>
-                    <li>Daemon2</li>
-                    <li>Buffalo2</li>
-                    <li>Deity</li>
-                    <li>Caracara2</li>
-                    <li>Diablous2</li>
-                    <li>carb2</li>
-                    <li>Dilettante</li>
-                    <li>Carbonizzare</li>
-                    <li>Dominator</li>
-                    <li>Cavalcade</li>
-                    <li>Dominator3</li>
-                    <li>Chimera</li>
                     <li>Draugur</li>
-                    <li>chino</li>
-                    <li>Elegy</li>
-                    <li>Chino2</li>
-                    <li>Elegy4</li>
-                    <li>Cliffhanger</li>
                     <li>Emperor</li>
-                    <li>Club</li>
-                    <li>Entityxf</li>
-                    <li>Cog552</li>
-                    <li>Faggio3</li>
-                    <li>Comet2</li>
-                    <li>Fcr2</li>
-                    <li>Compass</li>
-                    <li>Feltzer2</li>
-                    <li>Coquette</li>
-                    <li>Fipu</li>
-                    <li>Coquette4</li>
-                    <li>Flashgt</li>
-                    <li>Cyclone</li>
-                    <li>Fq2</li>
-                    <li>Cypher</li>
-                    <li>Furia</li>
-                    <li>Daemon2</li>
-                    <li>Furoregt</li>
-                    <li>Deity</li>
-                    <li>Futo</li>
-                    <li>Delsoleg</li>
-                    <li>Gauntlet</li>
-                    <li>Diablous2</li>
-                    <li>Gcmlamboultim</li>
-                    <li>Dilettante</li>
-                    <li>Granger</li>
-                    <li>Dogecargasrt</li>
-                    <li>Granger2</li>
-                    <li>Dogechalle</li>
-                    <li>Hakuchou</li>
-                    <li>Dominator</li>
-                    <li>Hcfk2</li>
-                    <li>Dominator3</li>
-                    <li>Hermes</li>
-                    <li>Draugur</li>
                     <li>Huntley</li>
-                    <li>Elegy</li>
-                    <li>Infernus</li>
-                    <li>Elegy2</li>
-                    <li>Ingot</li>
-                    <li>Elegy4</li>
-                    <li>Issi3</li>
-                    <li>Emperor</li>
-                    <li>Issi8</li>
-                    <li>Entityxf</li>
-                    <li>Italirsx</li>
-                    <li>Faggio3</li>
-                    <li>Jackal</li>
-                    <li>Fancerx</li>
-                    <li>Jester</li>
-                    <li>Fcr2</li>
-                    <li>Kanjo</li>
-                    <li>Fd2</li>
-                    <li>Kanjosj</li>
-                    <li>Feltzer2</li>
-                    <li>Khamelion</li>
-                    <li>Feltzer2</li>
                     <li>Land97</li>
-                    <li>Ferr488</li>
                     <li>Landstalker</li>
-                    <li>Filthyns</li>
-                    <li>Manchez</li>
-                    <li>Fipu</li>
-                    <li>Manchez2</li>
-                    <li>Flases</li>
                     <li>Mesa</li>
-                    <li>Flashgt</li>
-                    <li>Mk3vr6</li>
-                    <li>Fq2</li>
-                    <li>Mombi60</li>
-                    <li>Furia</li>
-                    <li>nightblade</li>
-                    <li>Furoregt</li>
-                    <li>Ninef</li>
-                    <li>Futo</li>
                     <li>Novak</li>
-                    <li>Gauntlet</li>
-                    <li>Omnisegt</li>
-                    <li>Gcmlamboultim</li>
-                    <li>Osiris</li>
-                    <li>Granger</li>
                     <li>Outlaw</li>
-                    <li>Granger2</li>
-                    <li>Panthere</li>
-                    <li>Gt3e</li>
-                    <li>Panto</li>
-                    <li>Hakuchou</li>
-                    <li>Pariah</li>
-                    <li>Hcfk2</li>
-                    <li>Patriot</li>
-                    <li>Hermes</li>
-                    <li>Patriot3</li>
-                    <li>Honody</li>
-                    <li>Penumbra</li>
-                    <li>Huntley</li>
-                    <li>Pfister811</li>
-                    <li>Infernus</li>
-                    <li>Postlude</li>
-                    <li>Ingot</li>
-                    <li>Powersurge</li>
-                    <li>Issi3</li>
-                    <li>Premier</li>
-                    <li>Issi8</li>
-                    <li>Primo2</li>
-                    <li>Italirsx</li>
-                    <li>Raiden</li>
-                    <li>Jackal</li>
-                    <li>Randerols</li>
-                    <li>Jeep392</li>
-                    <li>Ratel</li>
-                    <li>Jester</li>
-                    <li>Rhapsody</li>
-                    <li>Kanjo</li>
-                    <li>Rhinehart</li>
-                    <li>Kanjosj</li>
-                    <li>Rocoto</li>
-                    <li>Khamelion</li>
-                    <li>Rrocket</li>
-                    <li>Lambo610</li>
-                    <li>Rt3000</li>
-                    <li>Lambohura</li>
-                    <li>Sabregt2</li>
-                    <li>lamboursus</li>
-                    <li>Sanchez</li>
-                    <li>Land</li>
-                    <li>Sanchez2</li>
-                    <li>Land97</li>
-                    <li>Sanctus</li>
-                    <li>Landstalker</li>
                     <li>Sandking</li>
-                    <li>Lp700r</li>
-                    <li>Schwarzer</li>
-                    <li>Lunar</li>
-                    <li>Sentinel</li>
-                    <li>Mahar1</li>
-                    <li>sentinel2</li>
-                    <li>Mancer9</li>
-                    <li>Sentinel4</li>
-                    <li>Manchez</li>
-                    <li>Shinobi</li>
-                    <li>Manchez2</li>
-                    <li>Sl63</li>
-                    <li>Mayabusa</li>
-                    <li>Slamvan2</li>
-                    <li>Mbc63</li>
-                    <li>Specter2</li>
-                    <li>Mc70s</li>
-                    <li>Stingertt</li>
-                    <li>Mclarensenna</li>
-                    <li>Subarx04</li>
-                    <li>Meca400</li>
-                    <li>Sultan</li>
-                    <li>meca53</li>
-                    <li>Superd</li>
-                    <li>Meca63</li>
-                    <li>Surano</li>
-                    <li>Mecagtt63</li>
-                    <li>Surge</li>
-                    <li>Mentayblast</li>
-                    <li>Tailgater</li>
-                    <li>Mesa</li>
-                    <li>Tenbox</li>
-                    <li>Meslapior</li>
-                    <li>Torero2</li>
-                    <li>Mismo34</li>
-                    <li>Tornado</li>
-                    <li>Missan32</li>
-                    <li>Ts20</li>
-                    <li>Missan37z</li>
-                    <li>Turismor</li>
-                    <li>Missangtr</li>
-                    <li>Vacca</li>
-                    <li>Mk3vr6</li>
-                    <li>Vela</li>
-                    <li>Mombi60</li>
-                    <li>Virtue</li>
-                    <li>Mondaf8</li>
-                    <li>Voltic</li>
-                    <li>Mondar650</li>
-                    <li>Vortex</li>
-                    <li>nightblade</li>
-                    <li>Waltosi</li>
-                    <li>Ninef</li>
-                    <li>Washington</li>
-                    <li>Novak</li>
-                    <li>Weevil2</li>
-                    <li>Omnisegt</li>
-                    <li>Wgougt2</li>
-                    <li>Osiris</li>
-                    <li>Wjera</li>
-                    <li>Outlaw</li>
-                    <li>Wmw07</li>
-                    <li>Panthere</li>
-                    <li>Wmw34</li>
-                    <li>Panto</li>
-                    <li>wmwi8</li>
-                    <li>Pariah</li>
-                    <li>Wmwm3</li>
-                    <li>Patriot</li>
-                    <li>Wmwm380</li>
-                    <li>Patriot3</li>
-                    <li>Wmwm5</li>
-                    <li>Peejcheraki</li>
-                    <li>wmwm5tour</li>
-                    <li>Penumbra</li>
-                    <li>wmwm8</li>
-                    <li>Pfister811</li>
-                    <li>Wmwx16</li>
-                    <li>Porx18</li>
-                    <li>Wolfsbane</li>
-                    <li>Porxmalan</li>
-                    <li>Wrb36</li>
-                    <li>Postlude</li>
-                    <li>Wrcomet6</li>
-                    <li>Powersurge</li>
-                    <li>Wrok</li>
-                    <li>Premier</li>
-                    <li>Wrvittura</li>
-                    <li>Primo2</li>
-                    <li>Wwolf</li>
-                    <li>R300</li>
-                    <li>Xa21</li>
-                    <li>Raiden</li>
-                    <li>Xls2</li>
-                    <li>Randerols</li>
                     <li>Yosemite2</li>
-                    <li>Ratel</li>
-                    <li>Zeiran</li>
-                    <li>Rexufa</li>
-                    <li>Zentorno</li>
-                    <li>Rhapsody</li>
-                    <li>Zombiea</li>
-                    <li>Rhinehart</li>
-                    <li>Zombieb</li>
+                </ul>
+            </div>
+
+            <div class="sub-list">
+                <h4>Sedans e Compactos</h4>
+                <ul>
+                    <li>Asterope</li>
+                    <li>Blista</li>
+                    <li>Blista2</li>
+                    <li>Brioso</li>
+                    <li>Brioso3</li>
+                    <li>Buccaneer2</li>
+                    <li>Buffalo2</li>
+                    <li>Chino</li>
+                    <li>Chino2</li>
+                    <li>Club</li>
+                    <li>Cog552</li>
+                    <li>Dilettante</li>
+                    <li>Ingot</li>
+                    <li>Issi3</li>
+                    <li>Issi8</li>
+                    <li>Jackal</li>
+                    <li>Primo2</li>
+                    <li>Raiden</li>
                     <li>Rocoto</li>
-                    <li>Zr350</li>
-                    <li>Rrocket</li>
-                    <li>Rt3000</li>
-                    <li>Rx7</li>
-                    <li>Sabregt2</li>
-                    <li>Sanchez</li>
-                    <li>Sanchez2</li>
-                    <li>Sanctus</li>
-                    <li>Sandking</li>
-                    <li>Schwarzer</li>
-                    <li>Sentinel</li>
-                    <li>sentinel2</li>
-                    <li>Sentinel4</li>
-                    <li>Shinobi</li>
-                    <li>Sl63</li>
-                    <li>Slamvan2</li>
-                    <li>Specter2</li>
-                    <li>Stingertt</li>
-                    <li>Subarx04</li>
-                    <li>Sultan</li>
-                    <li>Superd</li>
-                    <li>Surano</li>
                     <li>Surge</li>
                     <li>Tailgater</li>
-                    <li>Tenbox</li>
-                    <li>Torero2</li>
-                    <li>Tornado</li>
-                    <li>Ts20</li>
-                    <li>Turismor</li>
-                    <li>Vacca</li>
-                    <li>Vela</li>
-                    <li>Virtue</li>
-                    <li>Voltic</li>
-                    <li>Vortex</li>
-                    <li>Waltosi</li>
-                    <li>Washington</li>
-                    <li>Weevil2</li>
-                    <li>Wgougt2</li>
-                    <li>Wjera</li>
-                    <li>Wmw07</li>
-                    <li>Wmw34</li>
-                    <li>wmwi8</li>
-                    <li>Wmwm3</li>
-                    <li>Wmwm380</li>
-                    <li>Wmwm5</li>
-                    <li>wmwm5tour</li>
-                    <li>wmwm8</li>
-                    <li>Wmwx16</li>
-                    <li>Wolfsbane</li>
-                    <li>Wrb36</li>
-                    <li>Wrcomet6</li>
-                    <li>Wrok</li>
-                    <li>Wrvittura</li>
-                    <li>Wwolf</li>
-                    <li>Xa21</li>
-                    <li>Xls2</li>
-                    <li>Yosemite2</li>
-                    <li>Zeiran</li>
-                    <li>Zentorno</li>
-                    <li>Zombiea</li>
-                    <li>Zombieb</li>
-                    <li>Zr350</li>
                 </ul>
             </div>
             
