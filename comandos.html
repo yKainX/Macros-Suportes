@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos - Manual de Staff</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #f1f1f1;
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #000;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .sidebar-content {
+            flex-grow: 1;
+        }
+        .sidebar-logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .sidebar-logo img {
+            max-width: 100%;
+            height: auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .sidebar-link {
+            display: block;
+            padding: 10px 15px;
+            margin-bottom: 5px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #b3b3b3;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        .sidebar-link:hover, .sidebar-link.active {
+            background-color: #282828;
+            color: #007bff;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.8em;
+            color: #666;
+        }
+        .main-content {
+            margin-left: 250px;
+            padding: 40px;
+            flex-grow: 1;
+        }
+        h1 {
+            color: #fff;
+            border-bottom: 2px solid #282828;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .accordion-item {
+            background-color: #1f1f1f;
+            border: 1px solid #282828;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        .accordion-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #fff;
+            background-color: #282828;
+            border-bottom: 1px solid #282828;
+        }
+        .accordion-header:hover {
+            background-color: #333;
+        }
+        .accordion-header h2 {
+            margin: 0;
+            font-size: 1.1em;
+            border: none;
+            padding: 0;
+        }
+        .accordion-icon {
+            font-size: 1.5em;
+            transition: transform 0.3s ease;
+        }
+        .accordion-content {
+            display: none;
+            padding: 15px;
+            color: #b3b3b3;
+        }
+        .command-syntax {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #333;
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        .command-description {
+            margin-top: 5px;
+        }
+        .command-group {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #333;
+        }
+        .command-group:last-child {
+            border-bottom: none;
+        }
+        .command-group h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+        .command-group p {
+            margin: 0;
+        }
+        .sub-list ul {
+            list-style-type: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .sub-list li {
+            background-color: #333;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <div class="sidebar-content">
+        <div class="sidebar-logo">
+            <img src="https://live.staticflickr.com/65535/54815496737_ab30f94768_b.jpg" alt="Logo Metroville">
+        </div>
+        <a href="index.html" class="sidebar-link">Macros</a>
+        <a href="comandos.html" class="sidebar-link active">Comandos</a>
+    </div>
+    <div class="footer">
+        Feito por Kain
+    </div>
+</div>
+
+<div class="main-content">
+    <h1>Comandos Essenciais</h1>
+
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <h2>Comandos Gerais</h2>
+            <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+            <div class="command-group">
+                <p><span class="command-syntax">/noclip</span> Ativa/Desativa o noclip.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/names</span> Ativa/Desativa os nomes de maneira básica.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/names2</span> Ativa/Desativa os nomes de maneira detalhada, exibindo também o Emprego e Grupo.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/painel [ID Personagem*]</span> Exibe o ID Painel da pessoa.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/inspect [ID Personagem*]</span> Revista uma determinada pessoa sem o aviso de 'Você está sendo revistado'.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/inventarioespecial [ID Personagem*]</span> Verifica o inventário especial de uma determinada pessoa.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/bau [Código do Baú*]</span> Revista um determinado baú.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/anuncio</span> Abre o modal de anúncio para a cidade toda.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/rnuncio</span> Remove o anúncio que está vísivel para toda cidade.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/forcelogout [Id Personagem*]</span> Força uma pessoa a ir para a tela de seleção de personagem.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/forceDead [Id Personagem*]</span> Força a morte de um determinado jogador.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/knockout [Id Personagem*]</span> Força o desmaio de um determinado jogador.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/players</span> Mostra quantas pessoas estão conectadas na cidade.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/ad [nome da animação*][distância*]</span> Aplica uma determinada animação para as pessoas dentro da distância definida próxima a você.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/skin [modelo*]</span> Define uma skin para o seu personagem.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/dry [ID Personagem*]</span> Seca inventário de uma determinada pessoa.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/duty [JOB*]</span> Entra/Sai de serviço em um determinado emprego. (Necessário estar setado no emprego)</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/video [URL*]</span> Starta um vídeo para toda a cidade.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/blackout</span> Ativa o blackout na cidade.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/debugrandomshop</span> Mostra a localização dos NPCs do ilegal (Bombado, Mascarado, Engravatado, Ratinho Crack)</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <h2>Comandos de Teleporte</h2>
+            <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+            <div class="command-group">
+                <p><span class="command-syntax">/tp [ID Personagem*][x, y, z]</span> Teleporta até um jogador ou até uma coordenada.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/tpme [ID Personagem*]</span> Teleporta um jogador até a sua posição.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/residencia [ID Da Residência*][Número]</span> Entra no interior de uma determinada residência.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <h2>Comandos de Carros</h2>
+            <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+            <div class="command-group">
+                <p><span class="command-syntax">/car [Modelo*][Placa]</span> Spawna um determinado modelo de carro.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/tunning</span> Acessa o menu de tunning de um veículo, para confirmar as modificações basta apertar ESC.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/bennys</span> Acessa o menu de personalizações de um veículo, para confirmar as modificações basta apertar ESC.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/fixar</span> Repara o veículo mais próximo de você.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/vspawn</span> Verificar o id do dono do veiculo</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/fuel [Quantidade*]</span> Adiciona uma quantidade de gasolina no seu veículo.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/garagem [ID Carro*][Código da Garagem]</span> Envia um determinado veículo para a garagem novamente.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/vfora [ID Personagem*]</span> Verifica os veículos que o jogador guardou em sua garagem.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/dv</span> Deleta um veículo próximo.</p>
+            </div>
+            
+            <h3>Modelos de Carros</h3>
+            <div class="sub-list">
+                <h4>Carros de Conce</h4>
+                <ul>
+                    <li>20xmax</li>
+                    <li>1200m</li>
+                    <li>Akuma</li>
+                    <li>20xmax</li>
+                    <li>Arsq8m</li>
+                    <li>21serra</li>
+                    <li>Asterope</li>
+                    <li>2b</li>
+                    <li>Astron</li>
+                    <li>500x</li>
+                    <li>Avarus</li>
+                    <li>675lt</li>
+                    <li>Baller2</li>
+                    <li>9type</li>
+                    <li>Bati</li>
+                    <li>Afritwin</li>
+                    <li>Bf400</li>
+                    <li>Akuma</li>
+                    <li>Bison</li>
+                    <li>Arsq8m</li>
+                    <li>Blista</li>
+                    <li>Asterope</li>
+                    <li>Blista2</li>
+                    <li>Astron</li>
+                    <li>Boor</li>
+                    <li>Aua3</li>
+                    <li>Brioso</li>
+                    <li>Auditt</li>
+                    <li>Brioso3</li>
+                    <li>Aurs63</li>
+                    <li>Buccaneer2</li>
+                    <li>Aus3s20</li>
+                    <li>Buffalo2</li>
+                    <li>Aus7</li>
+                    <li>Caracara2</li>
+                    <li>Aus8</li>
+                    <li>Carbonizzare</li>
+                    <li>Avarus</li>
+                    <li>Cavalcade</li>
+                    <li>Baller2</li>
+                    <li>Chimera</li>
+                    <li>Bati</li>
+                    <li>chino</li>
+                    <li>Beastline6x6</li>
+                    <li>Chino2</li>
+                    <li>Bf400</li>
+                    <li>Cliffhanger</li>
+                    <li>Bison</li>
+                    <li>Club</li>
+                    <li>Blista</li>
+                    <li>Cog552</li>
+                    <li>Blista2</li>
+                    <li>Compass</li>
+                    <li>Boor</li>
+                    <li>Coquette</li>
+                    <li>Brioso</li>
+                    <li>Coquette4</li>
+                    <li>Brioso3</li>
+                    <li>Cyclone</li>
+                    <li>Brz</li>
+                    <li>Cypher</li>
+                    <li>Buccaneer2</li>
+                    <li>Daemon2</li>
+                    <li>Buffalo2</li>
+                    <li>Deity</li>
+                    <li>Caracara2</li>
+                    <li>Diablous2</li>
+                    <li>carb2</li>
+                    <li>Dilettante</li>
+                    <li>Carbonizzare</li>
+                    <li>Dominator</li>
+                    <li>Cavalcade</li>
+                    <li>Dominator3</li>
+                    <li>Chimera</li>
+                    <li>Draugur</li>
+                    <li>chino</li>
+                    <li>Elegy</li>
+                    <li>Chino2</li>
+                    <li>Elegy4</li>
+                    <li>Cliffhanger</li>
+                    <li>Emperor</li>
+                    <li>Club</li>
+                    <li>Entityxf</li>
+                    <li>Cog552</li>
+                    <li>Faggio3</li>
+                    <li>Comet2</li>
+                    <li>Fcr2</li>
+                    <li>Compass</li>
+                    <li>Feltzer2</li>
+                    <li>Coquette</li>
+                    <li>Fipu</li>
+                    <li>Coquette4</li>
+                    <li>Flashgt</li>
+                    <li>Cyclone</li>
+                    <li>Fq2</li>
+                    <li>Cypher</li>
+                    <li>Furia</li>
+                    <li>Daemon2</li>
+                    <li>Furoregt</li>
+                    <li>Deity</li>
+                    <li>Futo</li>
+                    <li>Delsoleg</li>
+                    <li>Gauntlet</li>
+                    <li>Diablous2</li>
+                    <li>Gcmlamboultim</li>
+                    <li>Dilettante</li>
+                    <li>Granger</li>
+                    <li>Dogecargasrt</li>
+                    <li>Granger2</li>
+                    <li>Dogechalle</li>
+                    <li>Hakuchou</li>
+                    <li>Dominator</li>
+                    <li>Hcfk2</li>
+                    <li>Dominator3</li>
+                    <li>Hermes</li>
+                    <li>Draugur</li>
+                    <li>Huntley</li>
+                    <li>Elegy</li>
+                    <li>Infernus</li>
+                    <li>Elegy2</li>
+                    <li>Ingot</li>
+                    <li>Elegy4</li>
+                    <li>Issi3</li>
+                    <li>Emperor</li>
+                    <li>Issi8</li>
+                    <li>Entityxf</li>
+                    <li>Italirsx</li>
+                    <li>Faggio3</li>
+                    <li>Jackal</li>
+                    <li>Fancerx</li>
+                    <li>Jester</li>
+                    <li>Fcr2</li>
+                    <li>Kanjo</li>
+                    <li>Fd2</li>
+                    <li>Kanjosj</li>
+                    <li>Feltzer2</li>
+                    <li>Khamelion</li>
+                    <li>Feltzer2</li>
+                    <li>Land97</li>
+                    <li>Ferr488</li>
+                    <li>Landstalker</li>
+                    <li>Filthyns</li>
+                    <li>Manchez</li>
+                    <li>Fipu</li>
+                    <li>Manchez2</li>
+                    <li>Flases</li>
+                    <li>Mesa</li>
+                    <li>Flashgt</li>
+                    <li>Mk3vr6</li>
+                    <li>Fq2</li>
+                    <li>Mombi60</li>
+                    <li>Furia</li>
+                    <li>nightblade</li>
+                    <li>Furoregt</li>
+                    <li>Ninef</li>
+                    <li>Futo</li>
+                    <li>Novak</li>
+                    <li>Gauntlet</li>
+                    <li>Omnisegt</li>
+                    <li>Gcmlamboultim</li>
+                    <li>Osiris</li>
+                    <li>Granger</li>
+                    <li>Outlaw</li>
+                    <li>Granger2</li>
+                    <li>Panthere</li>
+                    <li>Gt3e</li>
+                    <li>Panto</li>
+                    <li>Hakuchou</li>
+                    <li>Pariah</li>
+                    <li>Hcfk2</li>
+                    <li>Patriot</li>
+                    <li>Hermes</li>
+                    <li>Patriot3</li>
+                    <li>Honody</li>
+                    <li>Penumbra</li>
+                    <li>Huntley</li>
+                    <li>Pfister811</li>
+                    <li>Infernus</li>
+                    <li>Postlude</li>
+                    <li>Ingot</li>
+                    <li>Powersurge</li>
+                    <li>Issi3</li>
+                    <li>Premier</li>
+                    <li>Issi8</li>
+                    <li>Primo2</li>
+                    <li>Italirsx</li>
+                    <li>Raiden</li>
+                    <li>Jackal</li>
+                    <li>Randerols</li>
+                    <li>Jeep392</li>
+                    <li>Ratel</li>
+                    <li>Jester</li>
+                    <li>Rhapsody</li>
+                    <li>Kanjo</li>
+                    <li>Rhinehart</li>
+                    <li>Kanjosj</li>
+                    <li>Rocoto</li>
+                    <li>Khamelion</li>
+                    <li>Rrocket</li>
+                    <li>Lambo610</li>
+                    <li>Rt3000</li>
+                    <li>Lambohura</li>
+                    <li>Sabregt2</li>
+                    <li>lamboursus</li>
+                    <li>Sanchez</li>
+                    <li>Land</li>
+                    <li>Sanchez2</li>
+                    <li>Land97</li>
+                    <li>Sanctus</li>
+                    <li>Landstalker</li>
+                    <li>Sandking</li>
+                    <li>Lp700r</li>
+                    <li>Schwarzer</li>
+                    <li>Lunar</li>
+                    <li>Sentinel</li>
+                    <li>Mahar1</li>
+                    <li>sentinel2</li>
+                    <li>Mancer9</li>
+                    <li>Sentinel4</li>
+                    <li>Manchez</li>
+                    <li>Shinobi</li>
+                    <li>Manchez2</li>
+                    <li>Sl63</li>
+                    <li>Mayabusa</li>
+                    <li>Slamvan2</li>
+                    <li>Mbc63</li>
+                    <li>Specter2</li>
+                    <li>Mc70s</li>
+                    <li>Stingertt</li>
+                    <li>Mclarensenna</li>
+                    <li>Subarx04</li>
+                    <li>Meca400</li>
+                    <li>Sultan</li>
+                    <li>meca53</li>
+                    <li>Superd</li>
+                    <li>Meca63</li>
+                    <li>Surano</li>
+                    <li>Mecagtt63</li>
+                    <li>Surge</li>
+                    <li>Mentayblast</li>
+                    <li>Tailgater</li>
+                    <li>Mesa</li>
+                    <li>Tenbox</li>
+                    <li>Meslapior</li>
+                    <li>Torero2</li>
+                    <li>Mismo34</li>
+                    <li>Tornado</li>
+                    <li>Missan32</li>
+                    <li>Ts20</li>
+                    <li>Missan37z</li>
+                    <li>Turismor</li>
+                    <li>Missangtr</li>
+                    <li>Vacca</li>
+                    <li>Mk3vr6</li>
+                    <li>Vela</li>
+                    <li>Mombi60</li>
+                    <li>Virtue</li>
+                    <li>Mondaf8</li>
+                    <li>Voltic</li>
+                    <li>Mondar650</li>
+                    <li>Vortex</li>
+                    <li>nightblade</li>
+                    <li>Waltosi</li>
+                    <li>Ninef</li>
+                    <li>Washington</li>
+                    <li>Novak</li>
+                    <li>Weevil2</li>
+                    <li>Omnisegt</li>
+                    <li>Wgougt2</li>
+                    <li>Osiris</li>
+                    <li>Wjera</li>
+                    <li>Outlaw</li>
+                    <li>Wmw07</li>
+                    <li>Panthere</li>
+                    <li>Wmw34</li>
+                    <li>Panto</li>
+                    <li>wmwi8</li>
+                    <li>Pariah</li>
+                    <li>Wmwm3</li>
+                    <li>Patriot</li>
+                    <li>Wmwm380</li>
+                    <li>Patriot3</li>
+                    <li>Wmwm5</li>
+                    <li>Peejcheraki</li>
+                    <li>wmwm5tour</li>
+                    <li>Penumbra</li>
+                    <li>wmwm8</li>
+                    <li>Pfister811</li>
+                    <li>Wmwx16</li>
+                    <li>Porx18</li>
+                    <li>Wolfsbane</li>
+                    <li>Porxmalan</li>
+                    <li>Wrb36</li>
+                    <li>Postlude</li>
+                    <li>Wrcomet6</li>
+                    <li>Powersurge</li>
+                    <li>Wrok</li>
+                    <li>Premier</li>
+                    <li>Wrvittura</li>
+                    <li>Primo2</li>
+                    <li>Wwolf</li>
+                    <li>R300</li>
+                    <li>Xa21</li>
+                    <li>Raiden</li>
+                    <li>Xls2</li>
+                    <li>Randerols</li>
+                    <li>Yosemite2</li>
+                    <li>Ratel</li>
+                    <li>Zeiran</li>
+                    <li>Rexufa</li>
+                    <li>Zentorno</li>
+                    <li>Rhapsody</li>
+                    <li>Zombiea</li>
+                    <li>Rhinehart</li>
+                    <li>Zombieb</li>
+                    <li>Rocoto</li>
+                    <li>Zr350</li>
+                    <li>Rrocket</li>
+                    <li>Rt3000</li>
+                    <li>Rx7</li>
+                    <li>Sabregt2</li>
+                    <li>Sanchez</li>
+                    <li>Sanchez2</li>
+                    <li>Sanctus</li>
+                    <li>Sandking</li>
+                    <li>Schwarzer</li>
+                    <li>Sentinel</li>
+                    <li>sentinel2</li>
+                    <li>Sentinel4</li>
+                    <li>Shinobi</li>
+                    <li>Sl63</li>
+                    <li>Slamvan2</li>
+                    <li>Specter2</li>
+                    <li>Stingertt</li>
+                    <li>Subarx04</li>
+                    <li>Sultan</li>
+                    <li>Superd</li>
+                    <li>Surano</li>
+                    <li>Surge</li>
+                    <li>Tailgater</li>
+                    <li>Tenbox</li>
+                    <li>Torero2</li>
+                    <li>Tornado</li>
+                    <li>Ts20</li>
+                    <li>Turismor</li>
+                    <li>Vacca</li>
+                    <li>Vela</li>
+                    <li>Virtue</li>
+                    <li>Voltic</li>
+                    <li>Vortex</li>
+                    <li>Waltosi</li>
+                    <li>Washington</li>
+                    <li>Weevil2</li>
+                    <li>Wgougt2</li>
+                    <li>Wjera</li>
+                    <li>Wmw07</li>
+                    <li>Wmw34</li>
+                    <li>wmwi8</li>
+                    <li>Wmwm3</li>
+                    <li>Wmwm380</li>
+                    <li>Wmwm5</li>
+                    <li>wmwm5tour</li>
+                    <li>wmwm8</li>
+                    <li>Wmwx16</li>
+                    <li>Wolfsbane</li>
+                    <li>Wrb36</li>
+                    <li>Wrcomet6</li>
+                    <li>Wrok</li>
+                    <li>Wrvittura</li>
+                    <li>Wwolf</li>
+                    <li>Xa21</li>
+                    <li>Xls2</li>
+                    <li>Yosemite2</li>
+                    <li>Zeiran</li>
+                    <li>Zentorno</li>
+                    <li>Zombiea</li>
+                    <li>Zombieb</li>
+                    <li>Zr350</li>
+                </ul>
+                <h4>Carros VIP</h4>
+                <ul>
+                    <li>20xmax</li>
+                    <li>1200m</li>
+                    <li>Akuma</li>
+                    <li>20xmax</li>
+                    <li>Arsq8m</li>
+                    <li>21serra</li>
+                    <li>Asterope</li>
+                    <li>2b</li>
+                    <li>Astron</li>
+                    <li>500x</li>
+                    <li>Avarus</li>
+                    <li>675lt</li>
+                    <li>Baller2</li>
+                    <li>9type</li>
+                    <li>Bati</li>
+                    <li>Afritwin</li>
+                    <li>Bf400</li>
+                    <li>Akuma</li>
+                    <li>Bison</li>
+                    <li>Arsq8m</li>
+                    <li>Blista</li>
+                    <li>Asterope</li>
+                    <li>Blista2</li>
+                    <li>Astron</li>
+                    <li>Boor</li>
+                    <li>Aua3</li>
+                    <li>Brioso</li>
+                    <li>Auditt</li>
+                    <li>Brioso3</li>
+                    <li>Aurs63</li>
+                    <li>Buccaneer2</li>
+                    <li>Aus3s20</li>
+                    <li>Buffalo2</li>
+                    <li>Aus7</li>
+                    <li>Caracara2</li>
+                    <li>Aus8</li>
+                    <li>Carbonizzare</li>
+                    <li>Avarus</li>
+                    <li>Cavalcade</li>
+                    <li>Baller2</li>
+                    <li>Chimera</li>
+                    <li>Bati</li>
+                    <li>chino</li>
+                    <li>Beastline6x6</li>
+                    <li>Chino2</li>
+                    <li>Bf400</li>
+                    <li>Cliffhanger</li>
+                    <li>Bison</li>
+                    <li>Club</li>
+                    <li>Blista</li>
+                    <li>Cog552</li>
+                    <li>Blista2</li>
+                    <li>Compass</li>
+                    <li>Boor</li>
+                    <li>Coquette</li>
+                    <li>Brioso</li>
+                    <li>Coquette4</li>
+                    <li>Brioso3</li>
+                    <li>Cyclone</li>
+                    <li>Brz</li>
+                    <li>Cypher</li>
+                    <li>Buccaneer2</li>
+                    <li>Daemon2</li>
+                    <li>Buffalo2</li>
+                    <li>Deity</li>
+                    <li>Caracara2</li>
+                    <li>Diablous2</li>
+                    <li>carb2</li>
+                    <li>Dilettante</li>
+                    <li>Carbonizzare</li>
+                    <li>Dominator</li>
+                    <li>Cavalcade</li>
+                    <li>Dominator3</li>
+                    <li>Chimera</li>
+                    <li>Draugur</li>
+                    <li>chino</li>
+                    <li>Elegy</li>
+                    <li>Chino2</li>
+                    <li>Elegy4</li>
+                    <li>Cliffhanger</li>
+                    <li>Emperor</li>
+                    <li>Club</li>
+                    <li>Entityxf</li>
+                    <li>Cog552</li>
+                    <li>Faggio3</li>
+                    <li>Comet2</li>
+                    <li>Fcr2</li>
+                    <li>Compass</li>
+                    <li>Feltzer2</li>
+                    <li>Coquette</li>
+                    <li>Fipu</li>
+                    <li>Coquette4</li>
+                    <li>Flashgt</li>
+                    <li>Cyclone</li>
+                    <li>Fq2</li>
+                    <li>Cypher</li>
+                    <li>Furia</li>
+                    <li>Daemon2</li>
+                    <li>Furoregt</li>
+                    <li>Deity</li>
+                    <li>Futo</li>
+                    <li>Delsoleg</li>
+                    <li>Gauntlet</li>
+                    <li>Diablous2</li>
+                    <li>Gcmlamboultim</li>
+                    <li>Dilettante</li>
+                    <li>Granger</li>
+                    <li>Dogecargasrt</li>
+                    <li>Granger2</li>
+                    <li>Dogechalle</li>
+                    <li>Hakuchou</li>
+                    <li>Dominator</li>
+                    <li>Hcfk2</li>
+                    <li>Dominator3</li>
+                    <li>Hermes</li>
+                    <li>Draugur</li>
+                    <li>Huntley</li>
+                    <li>Elegy</li>
+                    <li>Infernus</li>
+                    <li>Elegy2</li>
+                    <li>Ingot</li>
+                    <li>Elegy4</li>
+                    <li>Issi3</li>
+                    <li>Emperor</li>
+                    <li>Issi8</li>
+                    <li>Entityxf</li>
+                    <li>Italirsx</li>
+                    <li>Faggio3</li>
+                    <li>Jackal</li>
+                    <li>Fancerx</li>
+                    <li>Jester</li>
+                    <li>Fcr2</li>
+                    <li>Kanjo</li>
+                    <li>Fd2</li>
+                    <li>Kanjosj</li>
+                    <li>Feltzer2</li>
+                    <li>Khamelion</li>
+                    <li>Feltzer2</li>
+                    <li>Land97</li>
+                    <li>Ferr488</li>
+                    <li>Landstalker</li>
+                    <li>Filthyns</li>
+                    <li>Manchez</li>
+                    <li>Fipu</li>
+                    <li>Manchez2</li>
+                    <li>Flases</li>
+                    <li>Mesa</li>
+                    <li>Flashgt</li>
+                    <li>Mk3vr6</li>
+                    <li>Fq2</li>
+                    <li>Mombi60</li>
+                    <li>Furia</li>
+                    <li>nightblade</li>
+                    <li>Furoregt</li>
+                    <li>Ninef</li>
+                    <li>Futo</li>
+                    <li>Novak</li>
+                    <li>Gauntlet</li>
+                    <li>Omnisegt</li>
+                    <li>Gcmlamboultim</li>
+                    <li>Osiris</li>
+                    <li>Granger</li>
+                    <li>Outlaw</li>
+                    <li>Granger2</li>
+                    <li>Panthere</li>
+                    <li>Gt3e</li>
+                    <li>Panto</li>
+                    <li>Hakuchou</li>
+                    <li>Pariah</li>
+                    <li>Hcfk2</li>
+                    <li>Patriot</li>
+                    <li>Hermes</li>
+                    <li>Patriot3</li>
+                    <li>Honody</li>
+                    <li>Penumbra</li>
+                    <li>Huntley</li>
+                    <li>Pfister811</li>
+                    <li>Infernus</li>
+                    <li>Postlude</li>
+                    <li>Ingot</li>
+                    <li>Powersurge</li>
+                    <li>Issi3</li>
+                    <li>Premier</li>
+                    <li>Issi8</li>
+                    <li>Primo2</li>
+                    <li>Italirsx</li>
+                    <li>Raiden</li>
+                    <li>Jackal</li>
+                    <li>Randerols</li>
+                    <li>Jeep392</li>
+                    <li>Ratel</li>
+                    <li>Jester</li>
+                    <li>Rhapsody</li>
+                    <li>Kanjo</li>
+                    <li>Rhinehart</li>
+                    <li>Kanjosj</li>
+                    <li>Rocoto</li>
+                    <li>Khamelion</li>
+                    <li>Rrocket</li>
+                    <li>Lambo610</li>
+                    <li>Rt3000</li>
+                    <li>Lambohura</li>
+                    <li>Sabregt2</li>
+                    <li>lamboursus</li>
+                    <li>Sanchez</li>
+                    <li>Land</li>
+                    <li>Sanchez2</li>
+                    <li>Land97</li>
+                    <li>Sanctus</li>
+                    <li>Landstalker</li>
+                    <li>Sandking</li>
+                    <li>Lp700r</li>
+                    <li>Schwarzer</li>
+                    <li>Lunar</li>
+                    <li>Sentinel</li>
+                    <li>Mahar1</li>
+                    <li>sentinel2</li>
+                    <li>Mancer9</li>
+                    <li>Sentinel4</li>
+                    <li>Manchez</li>
+                    <li>Shinobi</li>
+                    <li>Manchez2</li>
+                    <li>Sl63</li>
+                    <li>Mayabusa</li>
+                    <li>Slamvan2</li>
+                    <li>Mbc63</li>
+                    <li>Specter2</li>
+                    <li>Mc70s</li>
+                    <li>Stingertt</li>
+                    <li>Mclarensenna</li>
+                    <li>Subarx04</li>
+                    <li>Meca400</li>
+                    <li>Sultan</li>
+                    <li>meca53</li>
+                    <li>Superd</li>
+                    <li>Meca63</li>
+                    <li>Surano</li>
+                    <li>Mecagtt63</li>
+                    <li>Surge</li>
+                    <li>Mentayblast</li>
+                    <li>Tailgater</li>
+                    <li>Mesa</li>
+                    <li>Tenbox</li>
+                    <li>Meslapior</li>
+                    <li>Torero2</li>
+                    <li>Mismo34</li>
+                    <li>Tornado</li>
+                    <li>Missan32</li>
+                    <li>Ts20</li>
+                    <li>Missan37z</li>
+                    <li>Turismor</li>
+                    <li>Missangtr</li>
+                    <li>Vacca</li>
+                    <li>Mk3vr6</li>
+                    <li>Vela</li>
+                    <li>Mombi60</li>
+                    <li>Virtue</li>
+                    <li>Mondaf8</li>
+                    <li>Voltic</li>
+                    <li>Mondar650</li>
+                    <li>Vortex</li>
+                    <li>nightblade</li>
+                    <li>Waltosi</li>
+                    <li>Ninef</li>
+                    <li>Washington</li>
+                    <li>Novak</li>
+                    <li>Weevil2</li>
+                    <li>Omnisegt</li>
+                    <li>Wgougt2</li>
+                    <li>Osiris</li>
+                    <li>Wjera</li>
+                    <li>Outlaw</li>
+                    <li>Wmw07</li>
+                    <li>Panthere</li>
+                    <li>Wmw34</li>
+                    <li>Panto</li>
+                    <li>wmwi8</li>
+                    <li>Pariah</li>
+                    <li>Wmwm3</li>
+                    <li>Patriot</li>
+                    <li>Wmwm380</li>
+                    <li>Patriot3</li>
+                    <li>Wmwm5</li>
+                    <li>Peejcheraki</li>
+                    <li>wmwm5tour</li>
+                    <li>Penumbra</li>
+                    <li>wmwm8</li>
+                    <li>Pfister811</li>
+                    <li>Wmwx16</li>
+                    <li>Porx18</li>
+                    <li>Wolfsbane</li>
+                    <li>Porxmalan</li>
+                    <li>Wrb36</li>
+                    <li>Postlude</li>
+                    <li>Wrcomet6</li>
+                    <li>Powersurge</li>
+                    <li>Wrok</li>
+                    <li>Premier</li>
+                    <li>Wrvittura</li>
+                    <li>Primo2</li>
+                    <li>Wwolf</li>
+                    <li>R300</li>
+                    <li>Xa21</li>
+                    <li>Raiden</li>
+                    <li>Xls2</li>
+                    <li>Randerols</li>
+                    <li>Yosemite2</li>
+                    <li>Ratel</li>
+                    <li>Zeiran</li>
+                    <li>Rexufa</li>
+                    <li>Zentorno</li>
+                    <li>Rhapsody</li>
+                    <li>Zombiea</li>
+                    <li>Rhinehart</li>
+                    <li>Zombieb</li>
+                    <li>Rocoto</li>
+                    <li>Zr350</li>
+                    <li>Rrocket</li>
+                    <li>Rt3000</li>
+                    <li>Rx7</li>
+                    <li>Sabregt2</li>
+                    <li>Sanchez</li>
+                    <li>Sanchez2</li>
+                    <li>Sanctus</li>
+                    <li>Sandking</li>
+                    <li>Schwarzer</li>
+                    <li>Sentinel</li>
+                    <li>sentinel2</li>
+                    <li>Sentinel4</li>
+                    <li>Shinobi</li>
+                    <li>Sl63</li>
+                    <li>Slamvan2</li>
+                    <li>Specter2</li>
+                    <li>Stingertt</li>
+                    <li>Subarx04</li>
+                    <li>Sultan</li>
+                    <li>Superd</li>
+                    <li>Surano</li>
+                    <li>Surge</li>
+                    <li>Tailgater</li>
+                    <li>Tenbox</li>
+                    <li>Torero2</li>
+                    <li>Tornado</li>
+                    <li>Ts20</li>
+                    <li>Turismor</li>
+                    <li>Vacca</li>
+                    <li>Vela</li>
+                    <li>Virtue</li>
+                    <li>Voltic</li>
+                    <li>Vortex</li>
+                    <li>Waltosi</li>
+                    <li>Washington</li>
+                    <li>Weevil2</li>
+                    <li>Wgougt2</li>
+                    <li>Wjera</li>
+                    <li>Wmw07</li>
+                    <li>Wmw34</li>
+                    <li>wmwi8</li>
+                    <li>Wmwm3</li>
+                    <li>Wmwm380</li>
+                    <li>Wmwm5</li>
+                    <li>wmwm5tour</li>
+                    <li>wmwm8</li>
+                    <li>Wmwx16</li>
+                    <li>Wolfsbane</li>
+                    <li>Wrb36</li>
+                    <li>Wrcomet6</li>
+                    <li>Wrok</li>
+                    <li>Wrvittura</li>
+                    <li>Wwolf</li>
+                    <li>Xa21</li>
+                    <li>Xls2</li>
+                    <li>Yosemite2</li>
+                    <li>Zeiran</li>
+                    <li>Zentorno</li>
+                    <li>Zombiea</li>
+                    <li>Zombieb</li>
+                    <li>Zr350</li>
+                </ul>
+            </div>
+            
+            <h3>Transportes da Polícia</h3>
+            <div class="sub-list">
+                <ul>
+                    <li>a45</li>
+                    <li>pol45</li>
+                    <li>Amarok Tatica</li>
+                    <li>poltock</li>
+                    <li>as (heli)</li>
+                    <li>as350</li>
+                    <li>barca da swat</li>
+                    <li>esv</li>
+                    <li>buzzard (heli)</li>
+                    <li>buzzard2</li>
+                    <li>Carro da UFS</li>
+                    <li>highl</li>
+                    <li>cb 500 rocam</li>
+                    <li>pol500xt</li>
+                    <li>charger</li>
+                    <li>polnforce1</li>
+                    <li>charger (Fast)</li>
+                    <li>pol challe</li>
+                    <li>corvete</li>
+                    <li>polvete</li>
+                    <li>ducatti rocam</li>
+                    <li>polmsf</li>
+                    <li>ducatti tatica</li>
+                    <li>poltmsf</li>
+                    <li>ec (heli)</li>
+                    <li>helicap</li>
+                    <li>harley</li>
+                    <li>polbikeb2</li>
+                    <li>m5</li>
+                    <li>polf90</li>
+                    <li>mt09</li>
+                    <li>polm09</li>
+                    <li>Mustang GT</li>
+                    <li>pol50020</li>
+                    <li>Police Crown</li>
+                    <li>polnforce7</li>
+                    <li>porsche</li>
+                    <li>polgtt</li>
+                    <li>premier</li>
+                    <li>g50s2023</li>
+                    <li>riot</li>
+                    <li>Blindado ITP</li>
+                    <li>rs7</li>
+                    <li>pol7c8</li>
+                    <li>subaru</li>
+                    <li>rubarung</li>
+                    <li>tiger rocam</li>
+                    <li>polmwr900</li>
+                    <li>uif</li>
+                    <li>poltrak</li>
+                    <li>vibora</li>
+                    <li>viper (fast)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <h2>Comandos de Hora e Clima</h2>
+            <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+            <div class="command-group">
+                <p><span class="command-syntax">/weather [Nome do Clima*]</span> Define um determinado clima. Site com os nomes dos climas: <a href="https://wiki.rage.mp/wiki/Weather" target="_blank">https://wiki.rage.mp/wiki/Weather</a></p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/time [Hora*][Minuto*]</span> Define a hora e o minuto atual do game.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/freezeWeather</span> Congela & Descongela o clima atual.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/freezeTime</span> Congela & Descongela o horário atual do game.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <h2>Comandos de Voice</h2>
+            <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+            <div class="command-group">
+                <p><span class="command-syntax">/tk [Distância]</span> Define a distância que você escutará a voz de outras pessoas.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/vd [Distância]</span> Define a distância em que sua voz chegará para outras pessoas.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <h2>Comandos de Setagem</h2>
+            <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+            <div class="command-group">
+                <p><span class="command-syntax">/job [ID Personagem*][Job*][Cargo]</span> Seta uma determinada pessoa em algum emprego legal.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/unjob [ID Personagem*][Job*]</span> Retira uma determinada pessoa de algum emprego legal.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/territorio [ID Familia*][Territorio*]</span> Seta uma família para acesso em um território.</p>
+            </div>
+            <h3>Rádios e Empregos</h3>
+            <ul>
+                <li>Polícia Capital - <code>policiaCapital</code></li>
+                <li>Polícia Detroit - <code>policiaDetroit</code></li>
+                <li>Interpol - <code>interpol</code></li>
+                <li>Mecânica Capital - <code>mecanicoCapital</code></li>
+                <li>Mecânica Detroit - <code>mecanicoDetroit</code></li>
+                <li>Hospital Capital - <code>hospitalCapital</code></li>
+                <li>Hospital Detroit - <code>hospitalDetroit</code></li>
+                <li>Jornalista - <code>jornalista</code></li>
+                <li>Imobiliária - <code>imobiliaria</code></li>
+                <li>Restaurante - <code>delivery</code></li>
+                <li>Voice (Usar TK & VD) - <code>voice</code></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <h2>Comandos de Reembolso</h2>
+            <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+            <div class="command-group">
+                <p><span class="command-syntax">/remmoney [Valor*][Tipo(RS,DS)*][ID Personagem*][Motivo]</span> Remove um determinado valor da mão de um jogador.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/rembank [Valor*][Tipo(RS,DS]*][ID Personagem*][Motivo]</span> Remove um determinado valor da conta bancária de um jogador.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/money [Valor*][Tipo(RS,DS]*][ID Personagem*][Motivo]</span> Adiciona um determinado valor à mão de um jogador.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/bank [Valor*][Tipo(RS,DS]*][ID Personagem*][Motivo]</span> Adiciona um determinado valor à conta bancária de um jogador.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <h2>Comandos de Props</h2>
+            <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+            <div class="command-group">
+                <p><span class="command-syntax">/prop [Nome da Prop*]</span> Insere uma determinada propriedade no local em que você está.</p>
+            </div>
+            <div class="command-group">
+                <p><span class="command-syntax">/editor</span> Entra no modo editor de props. Site para props: <a href="https://forge.plebmasters.de/objects" target="_blank">https://forge.plebmasters.de/objects</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <h2>Comandos de Kick</h2>
+            <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+            <div class="command-group">
+                <p><span class="command-syntax">/kick [ID Personagem*][Motivo]</span> Kicka uma determinada pessoa da cidade.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('.accordion-icon');
+            
+            const isExpanded = content.style.display === 'block';
+
+            document.querySelectorAll('.accordion-content').forEach(item => {
+                item.style.display = 'none';
+            });
+            document.querySelectorAll('.accordion-icon').forEach(item => {
+                item.textContent = '+';
+            });
+
+            if (!isExpanded) {
+                content.style.display = 'block';
+                icon.textContent = '−';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
