@@ -78,6 +78,43 @@
             font-size: 0.8em;
             color: #888;
         }
+        /* Novo CSS para a notificação */
+        #notification {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            right: 20px;
+            bottom: 20px;
+            font-size: 1em;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        #notification.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+        @-webkit-keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 20px; opacity: 1;}
+        }
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 20px; opacity: 1;}
+        }
+        @-webkit-keyframes fadeout {
+            from {bottom: 20px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+        @keyframes fadeout {
+            from {bottom: 20px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
     </style>
 </head>
 <body>
@@ -163,20 +200,20 @@
     </div>
 </div>
 
+<div id="notification">Macro copiada!</div>
+
 <script>
     function copiarMacro(btnElement) {
         var textoParaCopiar = btnElement.getAttribute('data-macro').replace(/\\n/g, '\n');
         
-        var tempInput = document.createElement("textarea");
-        tempInput.value = textoParaCopiar;
-        document.body.appendChild(tempInput);
-        
-        tempInput.select();
-        document.execCommand("copy");
-        
-        document.body.removeChild(tempInput);
-        
-        alert("Macro copiada para a área de transferência!");
+        navigator.clipboard.writeText(textoParaCopiar).then(function() {
+            var notification = document.getElementById("notification");
+            notification.className = "show";
+            setTimeout(function(){ notification.className = notification.className.replace("show", ""); }, 3000);
+        }).catch(function(err) {
+            console.error('Erro ao copiar a macro: ', err);
+            alert("Erro ao copiar a macro. Tente novamente.");
+        });
     }
 </script>
 
